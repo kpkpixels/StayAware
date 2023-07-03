@@ -1,0 +1,816 @@
+/*
+* Start Bootstrap - Half Slider (http://startbootstrap.com/)
+* Copyright 2013-2016 Start Bootstrap
+* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+*/
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+.reticencias{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reticencias:hover{
+  overflow: visible;
+  white-space: normal;
+  height:auto;
+}
+#corSig{
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+#abaSig{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  right: 10px;
+  position: absolute;
+  margin-top: 25px;
+  display: none;
+  padding: 5px;
+  background-color: white;
+}
+#turnoselect{
+  position: fixed;
+  top: 50px;
+  right: 3%;
+  z-index: 1;
+  height: 35px;
+  padding: 5px 4px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#brand{
+  color: white;
+  text-shadow:2px 2px 4px black;
+}
+.botaoCad{
+  width: 100% !important;
+}
+.recuperar{
+  font-size: 12px  !important;
+}
+
+.navbar-fixed-top{
+  background-color: #004d40 !important;
+  border-color: #004d40 !important;
+
+}
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+
+}
+.acessado{
+  border-bottom: 2px solid;
+  border-color: white;
+  height: 50px;
+}
+
+.selectfiltro{
+  display: inline-block;
+  vertical-align: middle;
+}
+.select-style {
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+.select-style:hover{background-color:#f5f5f5}
+
+#spanselect{
+  color: #004d40;
+}
+#spanfiltro{
+
+  padding-right: 5px;
+  display: inline-block;
+  color: #004d40;
+}
+
+#linkop:hover{
+  color: #004d40;
+  background: white;
+}
+#linkop{
+  text-decoration:none;
+  font-size: 15px;
+  color: #757575;
+}
+.itens{
+  min-width: 250px;
+  padding-top: 10px !important;
+  padding: inherit;
+  min-height: 400px;
+}
+.itens:hover{
+  opacity: 1.0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  background-color: #004d40;
+  color:white;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/*teste*/
+.input {
+  width: 25%;
+  display: inline;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.input:focus {
+  width: 35%;
+}
+
+.pesquisaItem {
+  width: 35%;
+  display: inline;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.pesquisaItem:focus {
+  width: 60%;
+}
+
+
+/*fimteste*/
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#004d40;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#004d40;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#004d40; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#004d40; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#004d40; }
+  to 	{ width:0; background:transparent; }
+}
+#linkbarra {
+  text-decoration: none;
+  position: relative;
+  color: white;
+}
+#linkbarra:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#linkbarra:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+  background:#004d40 !important;
+  color:white !important;
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+  min-width: 300px;
+  max-height: 300px;
+  opacity: 1;
+  background-color: white;
+  color: #004d40;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+
+}
+.dropdown.open .perfil {
+  min-width: 100px;
+  max-height: 300px;
+  opacity: 1;
+  background-color: white;
+  color: #004d40;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+
+}
+#botao {
+  background-color: #004d40; /* Green */
+  border: none;
+  color: white;
+  width: 60px;
+  height: 35px;
+  padding: 5px 4px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#botao:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#botaoPesquisaItem {
+  background-color: #004d40; /* Green */
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  padding: 5px 4px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#botaoPesquisaItem:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#cardPesquisa {
+  background-color: #004d40; /* Green */
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  padding: 5px 4px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#cardPesquisa:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#botaoPesquisaItemAdm {
+  background-color: #004d40; /* Green */
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  padding: 5px 4px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#botaoPesquisaItemAdm:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.confSenha{
+  display: none;
+}
+#senhaCor{
+  display: none;
+  color: #004d40;
+}
+#senhaInc{
+  display: none;
+  color: red;
+}
+
+.row{
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 100px;
+  padding-bottom: 1px;
+}
+
+ul.enlarge{
+list-style-type:none; /*remove the bullet point*/
+margin-left:0;
+}
+ul.enlarge li{
+display:inline-block; /*places the images in a line*/
+position: relative;
+z-index: 0; /*resets the stack order of the list items - later we'll increase this*/
+margin:10px 40px 0 20px;
+}
+ul.enlarge img{
+background-color:#fff;
+padding: 6px;
+-webkit-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+-moz-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+ul.enlarge span{
+position:absolute;
+left: -9999px;
+background-color:#fff;
+padding: 10px;
+font-family: 'Droid Sans', sans-serif;
+font-size:.9em;
+text-align: center;
+color: #495a62;
+-webkit-box-shadow: 0 0 6px rgba(0,0,0, .75));
+-moz-box-shadow: 0 0 6px rgba(0,0,0, .75);
+box-shadow: 0 0 6px rgba(0,0,0, .75);
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius:4px;
+}
+ul.enlarge li:hover{
+z-index: 50;
+cursor:pointer;
+}
+ul.enlarge span img{
+padding:2px;
+width: 350px;
+
+}
+ul.enlarge li:hover span{
+top: -300px; /*the distance from the bottom of the thumbnail to the top of the popup image*/
+left: -20px; /*distance from the left of the thumbnail to the left of the popup image*/
+}
+ul.enlarge li:hover:nth-child(2) span{
+left: -100px;
+}
+ul.enlarge li:hover:nth-child(3) span{
+left: -200px;
+}
+/**IE Hacks - see http://css3pie.com/ for more info on how to use CS3Pie and to download the latest version**/
+ul.enlarge img, ul.enlarge span{
+behavior: url(pie/PIE.htc);
+}
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+.carousel-control {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 75px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+    height: 20%;
+    top: 200px;
+}
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+/*
+.card:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.7), 0 2px 10px 0 rgba(0, 0, 0, 0.7);
+}
+*/
+.card span.card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.titulo{
+  top:50% !important;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  padding:0 5px;
+  font-size: 20px;
+  line-height: 1;
+  color: #262626;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.card .card-image span.titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-image {
+  position: relative;
+  min-height: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+.aba{
+  display: none;
+}
+
+.residuo{
+  border: 10px solid;
+  border-width: thin;
+  border-color: #004d40;
+}
+.abaedit1{
+  border-right: 10px solid;
+  border-width: thin;
+  border-color: #004d40;
+}
+.abaedit2 {
+  border-right: 10px solid;
+  border-width: thin;
+  border-color: #004d40;
+  }.abaedit3{
+    border-right: 10px solid;
+    border-width: thin;
+    border-color: #004d40;
+    }
+.aba1{
+  border-right: 10px solid;
+  border-width: thin;
+  border-color: #004d40;
+}
+.aba2 {
+  display: none;
+  border-right: 10px solid;
+  border-width: thin;
+  border-color: #004d40;
+  }.aba3{
+    display: none;
+    border-right: 10px solid;
+    border-width: thin;
+    border-color: #004d40;
+    } .aba4{
+      display: none;
+      border-right: 10px solid;
+      border-width: thin;
+      border-color: #004d40;
+      } .aba5{
+        display: none;
+        border-right: 10px solid;
+        border-width: thin;
+        border-color: #004d40;
+      }
+/*
+      .card .card-content p {
+        margin: 0;
+        color: inherit;
+      }
+      .card .card-content span.card-title {
+        line-height: 48px;
+      }
+      .card .card-action {
+        border-top: 1px solid rgba(160, 160, 160, 0.2);
+        padding: 16px;
+      }
+      .card .card-action h5 {
+        color: #ffab40;
+        margin-right: 16px;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+      }
+      .card .card-action h5:hover {
+        color: #ffd8a6;
+        text-decoration: none;
+      }
+
+*/
+
+
+.card {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: rgba(214, 224, 226, 0.2);
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
+.card.hovercard .card-background {
+    height: 130px;
+}
+.card-background img {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    margin-left: -100px;
+    margin-top: -200px;
+    min-width: 130%;
+}
+.card.hovercard .useravatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .useravatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.card.hovercard .card-info {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .card-info .card-title {
+    padding:0 5px;
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.card.hovercard .card-info {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+.btn-pref .btn {
+    -webkit-border-radius:0 !important;
+}
+.tab-content{
+  margin-top: -15px;
+}
+
+#botaoEdit {
+  border: none;
+  color: #004d40;
+  text-decoration: none;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  margin-top:-3px;
+  margin-right:-2px;
+  z-index: 1;
+  font-size: 20px;
+}
+#botaoEdit:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.but {
+display: inline-block;
+background-color: #ccc;
+color: #fff;
+background-color: #004d40;
+padding: 5px 20px;
+text-decoration: none;
+box-sizing: border-box;
+border: 0px;
+width: 49%;
+}
+.but-rc {
+border-radius: 4px;
+}
+.but-shadow {
+box-shadow: 1px 1px 1px #999;
+}
+.but:hover {
+background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.15));
+cursor: pointer;
+}
+
+button.selected{
+  background-color: #737373;
+}
+
+.cardapio {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.cardapio {
+  min-height: 460px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+
+footer {
+  margin: 3% 0;
+}
